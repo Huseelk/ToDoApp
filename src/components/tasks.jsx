@@ -80,6 +80,14 @@ const Tasks = ({ tasks, setTasks, status, setStatus, filteredTasks }) => {
         keepMounted
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
+        PaperProps={{
+            style: {
+                width: '400px',
+                height: '200px',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }
+        }}
       >
         <DialogTitle
           sx={{
@@ -99,6 +107,7 @@ const Tasks = ({ tasks, setTasks, status, setStatus, filteredTasks }) => {
               fontSize: "18px",
               lineHeight: "28px",
               borderRadius: "nullpx",
+
             }}
             onClick={() => {
               setTasks(tasks.filter((el) => el.id !== id));
