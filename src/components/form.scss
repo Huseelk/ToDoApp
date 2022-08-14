@@ -1,0 +1,94 @@
+.inputForm{
+    margin-bottom: 62px;
+    padding-left: 80px;
+    padding-right: 204px;
+    .errorMassage {
+        color: #FF3104;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+.text_container {
+    font-size: 18px;
+    color: #174348;
+}
+
+.input_container {
+    display: flex;
+}
+
+.taskInput {
+    border: 1px solid #FFCD04;
+    border-radius: 4px;
+    width: 80%;
+    min-height: 52px;
+    padding-left: 16px;
+    padding-right: 10px;
+    font-size: 18px;
+    line-height: 27px;
+    &::-webkit-input-placeholder { color: #DFDFDF; };
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 2px #FFCD04;
+        border-color: #FFCD04;
+        &::placeholder {
+            color: transparent;
+        }
+    }
+    &.error {
+        border: 1px solid #FF3104;
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 2px #FF3104;
+            border-color: #FF3104;
+        }
+    
+    }
+    // &::-webkit-search-cancel-button {
+    //     -webkit-appearance: none;
+    //     height: 1em;
+    //     width: 1em;
+    //     border-radius: 50em;
+    //     background: url(../assets/close.png) no-repeat 50% 50%;
+    //     background-size: contain;
+    //     pointer-events: none;
+    // }
+}
+
+.addButton {
+    background: #008594;
+    border-radius: 4px;
+    border: none;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 100px;
+    height: 52px;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 600px) {
+    .inputForm {
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-top: 53px;
+    }
+    .addButton {
+        margin-right: 0px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .input_container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+    .taskInput {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
